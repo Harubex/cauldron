@@ -36,7 +36,10 @@ async function login(): Promise<string> {
         throw new Error("Unable to log in.");
     }
     const body = await resp.json();
-    return body?.token?.token as string;
+    if (body && body.token && body.token.token) {
+        return body.token.token as string;
+    }
+    throw new Error("Unable to login to classic guild bank.");
 }
 
 async function apiCall(path: string) {

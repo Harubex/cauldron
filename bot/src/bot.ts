@@ -34,7 +34,8 @@ disc.on("message", async (msg: Discord.Message) => {
             return;
         }
     }
-    await msg.reply(`I'm unable to read your command. Here's a list of available commands: \n${Object.keys(commands).join(", ")}`);
+    // Spams every message
+    //await msg.reply(`I'm unable to read your command. Here's a list of available commands: \n${Object.keys(commands).join(", ")}`);
 });
 
 disc.login(process.env.DISCORD_TOKEN);
