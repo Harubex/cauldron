@@ -25,7 +25,7 @@
         ],
         "disableSizeLimit": true,
         "moduleResolution": "node",
-        "target": "es6",
+        "target": "esnext",
         "strict": true,
         "allowJs": true,
         "resolveJsonModule": true,

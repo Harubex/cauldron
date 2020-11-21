@@ -15,5 +15,9 @@ declare namespace NodeJS {
         ENGINE_API_KEY: string;
         NODE_ENV: "local" | "development" | "staging" | "production";
         SITE_URL: string;
+        CGB_LOGIN: string;
+        CGB_PASSWORD: string;
+        NEEDS_ENDPOINT: string;
+        BOT_NAME: string;
     }
 }

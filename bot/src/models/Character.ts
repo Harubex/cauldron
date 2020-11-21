@@ -13,4 +13,7 @@ export default class CharacterModel {
 
     @Column({ name: "modified", type: "timestamp" })
     public modified?: Date;
+
+    @Column({ name: "deleted", type: "bool" })
+    public deleted!: boolean;
 }

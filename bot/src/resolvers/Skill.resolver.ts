@@ -19,7 +19,7 @@ export class SkillResolver extends AbstractResolver<Skill> {
     public async findSkills(name: string): Promise<Skill[] | undefined> {
         return await this.find(Skill, {
             where: {
-                name: Raw((alias) => `${alias} ilike '%${name}%'`)
+                name: Raw((alias) => `${alias} ilike '%${name.replace("'", "''")}%'`) // Escape apostrophes.
             }
         });
     }

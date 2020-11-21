@@ -16,7 +16,8 @@ export class CharacterResolver extends AbstractResolver<Character> {
 
         return await this.find(Character, {
             where: {
-                id: In(charIds)
+                id: In(charIds),
+                deleted: false
             }
         })
     }
